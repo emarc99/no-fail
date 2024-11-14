@@ -50,7 +50,7 @@ export default function NavBar() {
                             ))}
                             </ul>
                             <div className="flex space-x-6">
-                                <a href="http://localhost:5173/login" className="py-2 px-3 border border-black rounded-full">
+                                <a href="/login" className="py-2 px-3 border border-black rounded-full">
                                     Log In
                                 </a>
                             </div>

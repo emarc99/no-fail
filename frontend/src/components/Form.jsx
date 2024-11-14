@@ -70,7 +70,7 @@ function Form({ route, method }) {
                 <p className="text-[12px] text-neutral-500 mb-5">Or sign in with</p>
                 <img src={socialauth} alt="social authentication icons  " />
                 {signAskOpen && (
-                    <p className="font-[700] text-[16px] mt-10 text-neutral-400">Don&apos;t have an account? <span className="text-bold text-[#3835ED]"> <a href="http://localhost:5173/register">Sign up</a></span></p>
+                    <p className="font-[700] text-[16px] mt-10 text-neutral-400">Don&apos;t have an account? <span className="text-bold text-[#3835ED]"> <a href="/register">Sign up</a></span></p>
                 )}
                 
             </form>
