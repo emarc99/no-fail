@@ -30,7 +30,7 @@ export default function NavBar() {
                             ))}
                         </ul>
                         <div className="hidden lg:flex justify-center space-x-12 items-center">
-                            <a href="http://localhost:5173/login" className="py-3 px-10 border border-black rounded-full">
+                            <a href="/login" className="py-3 px-10 border border-black rounded-full">
                             Log In
                             </a>
                         </div>
