@@ -25,12 +25,12 @@ export default function NavBar() {
                         <ul className="hidden lg:flex ml-14 space-x-12">
                             {navItems.map((item, index) => (
                             <li key={index}>
-                                <a href={item.href}>{item.label}</a>
+                                <a href={item.href} className="hover:text-[#3835ED]">{item.label}</a>
                             </li>
                             ))}
                         </ul>
                         <div className="hidden lg:flex justify-center space-x-12 items-center">
-                            <a href="/login" className="py-3 px-10 border border-black rounded-full">
+                            <a href="/login" className="py-3 px-10 border border-black rounded-full hover:border-transparent hover:bg-[#3835ED80] hover:text-white">
                             Log In
                             </a>
                         </div>
@@ -50,7 +50,7 @@ export default function NavBar() {
                             ))}
                             </ul>
                             <div className="flex space-x-6">
-                                <a href="/login" className="py-2 px-3 border border-black rounded-full">
+                                <a href="/login" className="py-2 px-3 border border-black rounded-full hover:border-transparent hover:bg-[#3835ED80] hover:text-white">
                                     Log In
                                 </a>
                             </div>
