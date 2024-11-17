@@ -45,8 +45,8 @@ function Form({ route, method }) {
     };
 
     return (
-    <><div className="flex justify-center">
-        <div className="form-side min-h-screen w-1/2 flex justify-center flex-col items-center relative top-3">
+    <><div className="flex justify-center flex-wrap w-full m-0">
+        <div className="form-side h-full w-1/2 flex justify-center flex-col items-center relative top-3">
             <a href="/home" className="absolute flex space-x-4 border border-[#3835ED80] rounded-full py-2 px-5 items-center top-5 left-9">
             <img src={back} alt="go back to home" className="w-[39px]"/>
             <p className="font-[700] text-[12px]">Go Back</p>
@@ -79,7 +79,7 @@ function Form({ route, method }) {
                     value={cac}
                     onChange={(e) => setCac(e.target.value)}
                     placeholder="CAC Reg. Number" 
-                    required/>
+                />
 
                 </>
                 )}

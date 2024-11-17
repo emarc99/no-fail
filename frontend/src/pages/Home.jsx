@@ -13,7 +13,7 @@ import spanblue from "../assets/span.icon.svg";
 import avatar2 from "../assets/avatar-05.webp.png";
 import avatar3 from "../assets/avatar-03.webp.png";
 import avatar4 from "../assets/div.avatar.png";
-
+import AIChatBotWrapper from "../components/ChatBot"
 function Home() {
 
     return (
@@ -29,6 +29,8 @@ function Home() {
             <p className="text-2xl font-bold text-center text-neutral-500">We support smarter decisions, empowering businesses to grow</p>
             <p className="text-2xl font-bold text-center text-neutral-500">steadily and avoid the usual pitfalls.</p>
         </div>
+
+        <AIChatBotWrapper />
         
         <div className="mt-20 mx-auto w-[563px] lg:flex justify-between space-x-12 items-center">
             <div className="py-4 px-14 border rounded-full flex justify-center items-center bg-[#3835ED] hover:space-x-2">
