@@ -5,6 +5,8 @@ import UserHome from "./pages/UserHome"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
+import Layout from './components/dashboard/Layout'
+import Inventory from './pages/Inventory'
 
 
 function Logout() {
@@ -39,11 +41,18 @@ function App() {
         <Route path="/notfound">
           <Route path="*" element={<NotFound />} />
         </Route>
+
         <Route path="/dashboard" element={
-          <ProtectedRoute>
-            <UserHome />
-          </ProtectedRoute>} 
-        />
+          // <ProtectedRoute>
+          <Layout />} >
+        <Route index element={<UserHome />} />
+        <Route path="inventory" element={<Inventory />} />
+
+
+         {/* </ProtectedRoute> */}
+          </Route>
+
+
          
       </Routes>
 
