@@ -5,7 +5,7 @@ import sales4 from "../assets/sales3.svg";
 
 export default function DashboardStatsGrid() {
 	return (
-		<div className=" bg-[#F4F5FC] px-7 pt-11 pb-8 border-[#CED4DA] border flex-1">
+		<div className=" bg-[#F4F5FC] px-7 pt-5 pb-5 border-[#CED4DA] border">
 			<h2 className='text-[16px] font-[500] mb-3'>
 			Sales Summary
 			</h2>

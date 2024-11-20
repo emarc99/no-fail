@@ -3,75 +3,75 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 const data = [
 	{
 		name: 'Jan',
-		Expense: 4000,
-		Income: 2400
+		"Stock Out": 4000,
+		"Stock In": 2400
 	},
 	{
 		name: 'Feb',
-		Expense: 3000,
-		Income: 1398
+		"Stock Out": 3000,
+		"Stock In": 1398
 	},
 	{
 		name: 'Mar',
-		Expense: 2000,
-		Income: 9800
+		"Stock Out": 2000,
+		"Stock In": 9800
 	},
 	{
 		name: 'Apr',
-		Expense: 2780,
-		Income: 3908
+		"Stock Out": 2780,
+		"Stock In": 3908
 	},
 	{
 		name: 'May',
-		Expense: 1890,
-		Income: 4800
+		"Stock Out": 1890,
+		"Stock In": 4800
 	},
 	{
 		name: 'Jun',
-		Expense: 2390,
-		Income: 3800
+		"Stock Out": 2390,
+		"Stock In": 3800
 	},
 	{
 		name: 'July',
-		Expense: 3490,
-		Income: 4300
+		"Stock Out": 3490,
+		"Stock In": 4300
 	},
 	{
 		name: 'Aug',
-		Expense: 2000,
-		Income: 9800
+		"Stock Out": 2000,
+		"Stock In": 9800
 	},
 	{
 		name: 'Sep',
-		Expense: 2780,
-		Income: 3908
+		"Stock Out": 2780,
+		"Stock In": 3908
 	},
 	{
 		name: 'Oct',
-		Expense: 1890,
-		Income: 4800
+		"Stock Out": 1890,
+		"Stock In": 4800
 	},
 	{
 		name: 'Nov',
-		Expense: 2390,
-		Income: 3800
+		"Stock Out": 2390,
+		"Stock In": 3800
 	},
 	{
 		name: 'Dec',
-		Expense: 3490,
-		Income: 4300
+		"Stock Out": 3490,
+		"Stock In": 4300
 	}
 ]
 
 export default function TransactionChart() {
 	return (
-		<div className="h-[22rem] bg-white p-4 rounded-sm border border-gray-200 flex flex-col flex-1 w-full">
+		<div className="h-[25rem] bg-white p-4 rounded-sm border border-gray-200 flex flex-col flex-1 w-full">
 			<strong className="text-gray-700 font-medium pl-3 py-4">Stock Report</strong>
 			<div className="mt-3 w-full flex-1 text-xs">
 				<ResponsiveContainer width="100%" height="100%">
 					<BarChart
 						width={800}
-						height={300}
+						height={500}
 						data={data}
 						margin={{
 							top: 20,
@@ -85,8 +85,8 @@ export default function TransactionChart() {
 						<YAxis />
 						<Tooltip />
 						<Legend />
-						<Bar dataKey="Income" fill="#0ea5e9" />
-						<Bar dataKey="Expense" fill="#ea580c" />
+						<Bar dataKey="Stock In" fill="#04B4FC" />
+						<Bar dataKey="Stock Out" fill="#6C11D9" />
 					</BarChart>
 				</ResponsiveContainer>
 			</div>

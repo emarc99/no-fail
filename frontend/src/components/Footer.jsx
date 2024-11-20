@@ -30,16 +30,15 @@ function Footer() {
             <img src={spanline} alt="" className="mb-3"/>
             <div className="flex justify-start mt-4 mb-3">
                 <img src={call} alt="" />
-                <p className="font-[500] text-[#A5A49A] text-[14px] leading-[30px] ml-2">666 888 0000</p>
+                <p className="font-[500] text-[#A5A49A] text-[14px] leading-[30px] ml-2">234 888 0000</p>
             </div>
             <div className="flex justify-start mb-3">
                 <img src={mail} alt="" />
-                <p className="font-[500] text-[#A5A49A] text-[14px] leading-[30px] ml-2">needhelp@company.com</p>
+                <p className="font-[500] text-[#A5A49A] text-[14px] leading-[30px] ml-2"> nofail.officials@gmail.com</p>
             </div>
             <div className="flex justify-start mb-8">
                 <img src={location} alt="" />
-                <p className="font-[500] text-[#A5A49A] text-[14px] leading-[30px] ml-2">80 broklyn golden street line
-                New York, USA</p>
+                <p className="font-[500] text-[#A5A49A] text-[14px] leading-[30px] ml-2">Lagos, Nigeria</p>
             </div>
             <label className="relative block">
                 <span className="absolute inset-y-0 right-0 flex items-center pr-10">

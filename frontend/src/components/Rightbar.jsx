@@ -6,7 +6,7 @@ import avatar from "../assets/avatar.png";
 import dots from "../assets/icon-wrapper-h.svg";
 import pc from "../assets/macbk.png";
 import iphone from "../assets/iphone.png";
-import hit from "../assets/hitbox.svg";
+// import hit from "../assets/hitbox.svg";
 import product from "../assets/product.svg";
 import supplier from "../assets/supplier.svg";
 import exportp from "../assets/export.svg";
@@ -92,13 +92,11 @@ export default function Rightbar() {
                 <p className='mb-3'>Quick Actions</p>
                 <div className='flex justify-between pb-3 text-[#5C6F88]'>
                     <div className='flex flex-col gap-y-4'>  
-                        <div className='flex'><img src={hit} alt="" className='mr-3' /> <a href="">Create Order</a></div>      
                         <div className='flex'><img src={product} alt="" className='mr-3'/> <a href="">Add Product</a></div> 
                         <div className='flex'><img src={supplier} alt="" className='mr-3'/> <a href="">Add Supplier</a></div> 
                         <div className='flex'><img src={exportp} alt="" className='mr-3'/> <a href="">Export</a></div>
                     </div>
                     <div className='text-[12px]'>
-                        <p>ctrl + n</p>
                         <p>ctrl + p</p>
                         <p>ctrl + q</p>
                         <p>ctrl + s</p>
@@ -107,28 +105,32 @@ export default function Rightbar() {
             </div>
 
             <div className='pt-6 pl-11 bg-white pr-6 text-[12px] font-medium'>
-                <p className='mb-6  text-[16px]'>Fast Moving Items</p>
-                <div className='flex flex-col justify-between items-start pb-3 gap-y-4 text-[#212529]'>    
-                    <div className='flex items-center gap-x-2'>
-                        <img src={pc} alt="" /> <a href="#">  Macbook Pro</a>
+                <p className='mb-6  text-[16px]'>Recent Activity</p>
+                <div className='flex flex-col justify-between items-start pb-3 gap-y-4 text-[#5C6F88]'>   
+                    <p className='mb-3 text-[12px] font-medium'>Restocked 6 Products</p> 
+                    <div className='flex items-center  gap-x-2 text-[10px] font-[400] w-full justify-start '>
+                        <img src={pc} alt="" /> <a href="#">  Macbook Pro</a> 
+                        <p className='self-center justify-self-end'>       -      1 m ago</p>
                     </div>
-                    <div className='flex items-center gap-x-2'>
+                    <p className='mb-3 text-[12px] font-medium'>Restocked 6 Products</p>
+                    <div className='flex items-center gap-x-2 text-[10px] font-[400]'>
                         <img src={iphone} alt="" /> <a href="#">  Iphone 14 pro</a>
+                        <p className='self-center justify-self-end'>       -      12 m ago</p>
                     </div>
-                    <div className='flex items-center gap-x-2'>
+                    <p className='mb-3 text-[12px] font-medium'>Restocked 6 Products</p>
+                    <div className='flex items-center gap-x-2 text-[10px] font-[400]'>
                         <img src={pc} alt="" /> <a href="#">  Zoom75</a>
+                        <p className='self-center justify-self-end'>       -      23 m ago</p>
                     </div>
-                    <div className='flex items-center gap-x-2'>
+                    <p className='mb-3 text-[12px] font-medium'>Restocked 6 Products</p>
+                    <div className='flex items-center gap-x-2 text-[10px] font-[400]'>
                         <img src={pc} alt="" /> <a href="#">  Airpods Pro</a>
+                        <p className='self-center justify-self-end'>       -      53 m ago</p>
                     </div>
-                    <div className='flex items-center gap-x-2'>
+                    <p className='mb-3 text-[12px] font-medium'>Restocked 6 Products</p>
+                    <div className='flex items-center gap-x-2 mb-6 text-[10px] font-[400]'>
                         <img src={pc} alt="" /> <a href="#">  Samsung Galaxy Fold</a>
-                    </div>
-                    <div className='flex items-center gap-x-2'>
-                        <img src={pc} alt="" /> <a href="#">  Samsung Odyssey</a>
-                    </div>
-                    <div className='flex items-center gap-x-2'>
-                        <img src={pc} alt="" /> <a href="#"> Logitech Superlightr</a>
+                        <p className='self-center justify-self-end'>       -      1 h ago</p>
                     </div>
                 </div>
             </div>

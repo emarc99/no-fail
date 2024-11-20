@@ -1,102 +1,106 @@
-import { format } from 'date-fns'
 import { Link } from 'react-router-dom'
 import { getOrderStatus } from '../lib/helpers'
-
+import p1 from "../assets/unsplash_1.png";
+import p2 from "../assets/unsplash_2.png";
+import p3 from "../assets/unsplash_3.png";
+import p4 from "../assets/unsplash_4.png";
+import p5 from "../assets/unsplash_5.png";
+import p6 from "../assets/unsplash_6.png";
 const recentOrderData = [
 	{
-		id: '1',
-		product_id: '4324',
-		customer_id: '23143',
-		customer_name: 'Shirley A. Lape',
-		order_date: '2022-05-17T03:24:00',
-		order_total: '$435.50',
-		current_order_status: 'PLACED',
-		shipment_address: 'Cottage Grove, OR 97424'
-	},
-	{
-		id: '7',
-		product_id: '7453',
-		customer_id: '96453',
-		customer_name: 'Ryan Carroll',
-		order_date: '2022-05-14T05:24:00',
-		order_total: '$96.35',
-		current_order_status: 'CONFIRMED',
-		shipment_address: 'Los Angeles, CA 90017'
-	},
-	{
-		id: '2',
-		product_id: '5434',
-		customer_id: '65345',
-		customer_name: 'Mason Nash',
-		order_date: '2022-05-17T07:14:00',
-		order_total: '$836.44',
-		current_order_status: 'SHIPPED',
-		shipment_address: 'Westminster, CA 92683'
-	},
-	{
-		id: '3',
-		product_id: '9854',
-		customer_id: '87832',
-		customer_name: 'Luke Parkin',
-		order_date: '2022-05-16T12:40:00',
-		order_total: '$334.50',
-		current_order_status: 'SHIPPED',
-		shipment_address: 'San Mateo, CA 94403'
-	},
-	{
-		id: '4',
-		product_id: '8763',
-		customer_id: '09832',
-		customer_name: 'Anthony Fry',
-		order_date: '2022-05-14T03:24:00',
-		order_total: '$876.00',
-		current_order_status: 'OUT_FOR_DELIVERY',
-		shipment_address: 'San Mateo, CA 94403'
-	},
-	{
-		id: '5',
-		product_id: '5627',
-		customer_id: '97632',
-		customer_name: 'Ryan Carroll',
-		order_date: '2022-05-14T05:24:00',
-		order_total: '$96.35',
+		name: 'Macbook Pro',
+		code: '0001',
+		price: '$1,250',
+		type: '23143',
+		quantity: '44',
+		image: p1,
 		current_order_status: 'DELIVERED',
-		shipment_address: 'Los Angeles, CA 90017'
+	},
+	{
+		name: 'iPhone 14 pro ',
+		code: '0002',
+		price: '$235',
+		type: '23143',
+		quantity: '23',
+		image: p2,
+		current_order_status: 'OUT_OF_STOCK',
+	},
+	{
+		name: 'Zoom75',
+		code: '0003',
+		price: '$215',
+		type: '23143',
+		quantity: '22',
+		image: p3,
+		current_order_status: 'PLACED',
+	},
+	{
+		name: 'Airpods Pro',
+		code: '0004',
+		price: '$102',
+		type: '23143',
+		quantity: '52',
+		image: p4,
+		current_order_status: 'CONFIRMED',
+	},
+	{
+		name: 'Logitech Superlight',
+		code: '0005',
+		price: '$500',
+		type: '23143',
+		quantity: '12',
+		image: p5,
+		current_order_status: 'SHIPPED',
+	},
+	{
+		name: 'Samsung Galaxy Fold',
+		code: '0006',
+		price: '$35',
+		type: '23143',
+		quantity: '100',
+		image: p6,
+		current_order_status: 'OUT_FOR_DELIVERY',
 	}
 ]
 
 export default function RecentOrders() {
 	return (
 		<div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
-			<strong className="text-gray-700 font-medium">Recent Orders</strong>
-			<div className="border-x border-gray-200 rounded-sm mt-3">
-				<table className="w-full text-gray-700">
+			<div className='flex justify-between  py-6 pr-4 w-full'>
+				<strong className="text-gray-700 text-[20px] font-medium">Product List</strong>
+				<div className='bg-[#6C11D9] rounded-sm py-2 px-4'>
+					<img src="" alt="" />
+					<p className='font-[500] text-white text-sm'>Add New Product</p>
+				</div>
+			</div>
+			<div className="border-gray-200 rounded-sm mt-3 w-full">
+				<table className="w-full">
 					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Product ID</th>
-							<th>Customer Name</th>
-							<th>Order Date</th>
-							<th>Order Total</th>
-							<th>Shipping Address</th>
-							<th>Order Status</th>
+						<tr className='text-left bg-[#F4F5FC]  rounded-xl border-spacing-x-20 text-[#5C6F88]'>
+							<th className='pl-7'>Name</th>
+							<th>Code</th>
+							<th>Type</th>
+							<th>Price</th>
+							<th>Quantity</th>
+							<th>Image</th>
+							<th>Status</th>
 						</tr>
 					</thead>
 					<tbody>
 						{recentOrderData.map((order) => (
-							<tr key={order.id}>
-								<td>
-									<Link to={`/order/${order.id}`}>#{order.id}</Link>
+							<tr key={order.name} className='bg-[#F4F5FC] border-[10px] rounded-xl border-spacing-y-20 border-white' >
+								<td className='pl-5'>
+									<Link to={`/order/${order.name}`}>{order.name}</Link>
 								</td>
 								<td>
-									<Link to={`/product/${order.product_id}`}>#{order.product_id}</Link>
+									<Link to={`/product/${order.code}`}>#{order.code}</Link>
 								</td>
 								<td>
-									<Link to={`/customer/${order.customer_id}`}>{order.customer_name}</Link>
+									<Link to={`/customer/${order.price}`}>{order.type}</Link>
 								</td>
-								<td>{format(new Date(order.order_date), 'dd MMM yyyy')}</td>
-								<td>{order.order_total}</td>
-								<td>{order.shipment_address}</td>
+								<td>{order.price}</td>
+								<td>{order.quantity}</td>
+								<td><img src={order.image} alt="" className='my-5' /> </td>
 								<td>{getOrderStatus(order.current_order_status)}</td>
 							</tr>
 						))}
