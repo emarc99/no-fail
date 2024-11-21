@@ -6,6 +6,9 @@ import p3 from "../assets/unsplash_3.png";
 import p4 from "../assets/unsplash_4.png";
 import p5 from "../assets/unsplash_5.png";
 import p6 from "../assets/unsplash_6.png";
+import plus from "../assets/plusicon.svg";
+
+
 const recentOrderData = [
 	{
 		name: 'Macbook Pro',
@@ -68,8 +71,8 @@ export default function RecentOrders() {
 		<div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
 			<div className='flex justify-between  py-6 pr-4 w-full'>
 				<strong className="text-gray-700 text-[20px] font-medium">Product List</strong>
-				<div className='bg-[#6C11D9] rounded-sm py-2 px-4'>
-					<img src="" alt="" />
+				<div className='bg-[#6C11D9] flex gap-x-3 rounded-sm py-2 px-4'>
+					<img src={plus} alt="" />
 					<p className='font-[500] text-white text-sm'>Add New Product</p>
 				</div>
 			</div>

@@ -2,8 +2,9 @@ import {
 	HiOutlineViewGrid,
 	HiOutlineCube,
 	HiOutlineShoppingCart,
-	HiOutlineUsers,
-	HiOutlineDocumentText,
+	HiOutlineChartSquareBar,
+	HiCash,
+	HiTruck,
 	HiOutlineQuestionMarkCircle,
 	HiOutlineCog
 } from 'react-icons/hi'
@@ -31,19 +32,19 @@ export const DASHBOARD_SIDEBAR_LINKS = [
 		key: 'orders',
 		label: 'Sales Orders',
 		path: 'orders',
-		icon: <HiOutlineShoppingCart />
+		icon: <HiCash />
 	},
 	{
-		key: 'transactions',
+		key: 'cashflow',
 		label: 'Cashflow',
 		path: 'cashflow',
-		icon: <HiOutlineDocumentText />
+		icon: <HiTruck />
 	},
 	{
 		key: 'reports',
 		label: 'Reports',
 		path: 'reports',
-		icon: <HiOutlineUsers />
+		icon: <HiOutlineChartSquareBar />
 	},
 
 ]

@@ -7,6 +7,10 @@ import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Layout from './components/dashboard/Layout'
 import Inventory from './pages/Inventory'
+import Shop from './pages/Shop'
+import Report from './pages/Report'
+import CashFlow from './pages/CashFlow'
+import toast, { Toaster } from "react-hot-toast";
 
 
 function Logout() {
@@ -22,6 +26,8 @@ function RegisterAndLogout() {
 
 function App() {
   return (
+<>
+<Toaster position="top-right" />
     <BrowserRouter   future={{
       v7_relativeSplatPath: true,
     }}>
@@ -42,21 +48,29 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
 
+
+       
         <Route path="/dashboard" element={
-          // <ProtectedRoute>
-          <Layout />} >
+           <ProtectedRoute>
+          <Layout />
+          </ProtectedRoute>
+          } >
         <Route index element={<UserHome />} />
         <Route path="inventory" element={<Inventory />} />
+        <Route path="shop" element={<Shop />} />
+        <Route path="reports" element={<Report />} />
+        <Route path="cashflow" element={<CashFlow />} />
 
-
-         {/* </ProtectedRoute> */}
-          </Route>
+        
+        </Route>
 
 
          
       </Routes>
 
     </BrowserRouter>
+</>
+    
   )
 }
 

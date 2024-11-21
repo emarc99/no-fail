@@ -21,7 +21,7 @@ function Home() {
 
         <NavBar />
 
-        <div className="mt-[40px] bg-twinkles-lp bg-no-repeat bg-center">
+        <div className="mt-[40px] bgz-twinkles-lp bg-no-repeat bg-center">
             <h2 className="text-[64px] font-extrabold text-center">We help businesses thrive</h2>
             <p className="text-[64px] font-extrabold text-center">after funding by tackling common</p>
             {/* <img className="float-left" src={polygon} alt="star icon" /> */}

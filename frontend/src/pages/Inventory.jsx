@@ -1,5 +1,6 @@
 import RecentOrders from '../components/RecentOrders'
 import Rightbar from '../components/Rightbar'
+import AIChatBotWrapper from "../components/ChatBot"
 
 export default function Products() {
 
@@ -13,6 +14,7 @@ export default function Products() {
                     <RecentOrders />
                     
                 </div>
+                <AIChatBotWrapper />
                 <p className='text-center font-medium text-[#000000B2] text-[16px]'>© 2024 Nofail Team, Inc.</p>
             </div>
             <Rightbar />
